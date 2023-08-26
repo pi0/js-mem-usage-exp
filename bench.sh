@@ -1,13 +1,13 @@
 #!/bin/sh
 
-node bench.mjs ./inline.mjs
-# node bench.mjs ./outside.mjs
+node bench.mjs ./fixtures/inline.mjs
+# node bench.mjs ./fixtures/outside.mjs
 echo ""
 
-deno run --allow-read bench.mjs ./inline.mjs
-# deno run --allow-read bench.mjs ./outside.mjs
+deno run --allow-read bench.mjs ./fixtures/inline.mjs
+# deno run --allow-read bench.mjs ./fixtures/outside.mjs
 echo ""
 
-bun --bun bench.mjs ./inline.mjs
-# bun --bun bench.mjs ./outside.mjs
+bun --bun bench.mjs ./fixtures/inline.mjs
+# bun --bun bench.mjs ./fixtures/outside.mjs
 echo ""

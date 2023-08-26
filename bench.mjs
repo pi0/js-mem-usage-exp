@@ -28,7 +28,7 @@ function printTable(obj) {
   const columns = Object.keys(obj[Object.keys(obj)[0]]);
   const maxLens = columns.map((c) => c.length);
   const rows = [
-    ["-", ...columns.map(startCase)],
+    ["Stage", ...columns.map(startCase)],
     ["", ...columns.map(() => "-")],
   ];
   for (const key in obj) {
@@ -45,7 +45,7 @@ function printTable(obj) {
       .map((r, ri) =>
         r
           .map((c, ci) => c.padEnd(maxLens[ci] + 4, ri === 1 ? "-" : " "))
-          .join(" | ")
+          .join("|")
       )
       .join("\n")
   );
