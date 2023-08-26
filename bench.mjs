@@ -45,7 +45,7 @@ function printTable(obj) {
       .map((r, ri) =>
         r
           .map((c, ci) => c.padEnd(maxLens[ci] + 4, ri === 1 ? "-" : " "))
-          .join("|")
+          .join(" | ")
       )
       .join("\n")
   );
